@@ -1,8 +1,8 @@
 Source: epics-calc
 Section: libdevel
-Priority: extra
-Maintainer: Michael Davidsaver <mdavidsaver@gmail.com>
-Build-Depends: debhelper (>= 9.20141010), dpkg-dev (>= 1.17.14),
+Priority: optional
+Maintainer: Martin Konrad <konrad@frib.msu.edu>
+Build-Depends: debhelper (>= 10), dpkg-dev (>= 1.17.14),
                epics-debhelper (>= 8.14~), epics-dev, epics-asyn-dev,
                epics-sscan-dev, epics-seq-dev,
                rtems-sscan-mvme2100 <pkg.epics-base.rtems>,
@@ -21,7 +21,7 @@ Vcs-Browser: https://github.com/epicsdeb/epics-calc
 
 Package: epics-calc-dev
 Architecture: any
-Depends: libcalc3.7.1 (= ${binary:Version}),
+Depends: libcalc3.7.3 (= ${binary:Version}),
          ${shlibs:Depends}, ${misc:Depends},
          ${epics:Depends},
 Conflicts: epics-synapps, epics-synapps-dev,
@@ -37,7 +37,7 @@ Description: Additional calculator record types
  .
  This package contains headers and libraries needed at build time.
 
-Package: libcalc3.7.1
+Package: libcalc3.7.3
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends},
 Description: Additional calculator record types
